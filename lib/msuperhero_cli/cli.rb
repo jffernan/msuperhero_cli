@@ -1,7 +1,7 @@
 #CLI Controller
 class MsuperheroCli::CLI
   def call
-    start
+    menu
   end
 
   def list #Greet user and list superheroes from scraping
@@ -9,7 +9,7 @@ class MsuperheroCli::CLI
     puts "The following is a list of famous superhero characters in no particular order. 'Nuff said:"
   end
 
-  def start
+  def menu
     list #shows list of http://marvel.com/characters/list/994/top_marvel_heroes
   end
 end
