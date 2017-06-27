@@ -1,5 +1,7 @@
-require "msuperhero_cli/version"
+require 'open-uri'
+require 'nokogiri'
+require 'pry'
 
-module MsuperheroCli
-  # Your code goes here...
-end
+require "msuperhero_cli/version"
+require "msuperhero_cli/superhero"
+require "msuperhero_cli/cli"

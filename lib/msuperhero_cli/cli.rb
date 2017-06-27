@@ -1,12 +1,12 @@
 #CLI Controller
-def MsuperheroCli::CLI
+class MsuperheroCli::CLI
   def call
     start
   end
 
   def list #Greet user and list superheroes from scraping
-    puts "*******Welcome True Believers to this CLI app to learn about popular comic book superheroes*******"
-    puts "Here is a list of famous superhero characters in no particular order...'nuff said:"
+    puts "***Welcome True Believers to this CLI app to learn about popular comic book superheroes***"
+    puts "The following is a list of famous superhero characters in no particular order. 'Nuff said:"
   end
 
   def start
