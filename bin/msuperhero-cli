@@ -2,4 +2,4 @@
 require "bundler/setup"
 require "msuperhero_cli"
 
-puts "test"
+MsuperheroCli::CLI.new.call
