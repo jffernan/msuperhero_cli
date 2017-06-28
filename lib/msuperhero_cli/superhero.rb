@@ -1,24 +1,12 @@
 class MsuperheroCli::Superhero
-  attr_accessor :name, :real_name, :powers, :bio
-
-  def self.list
-    #scrape list to be able to print list
-    self.scrape_superheroes
+  def get_page
+    Nokogiri::HTML(open("http://marvel.com/characters/list/994/top_marvel_heroes"))
   end
 
-  def self.scrape_superheroes
-    superheroes = [] #empty array
-
-    superheroes << self.scrape_mwebsite
-
-    superheroes
-  end
-
-  def self.scrape_mwebsite
-    doc = Nokogiri::HTML(open("http://marvel.com/characters/list/994/top_marvel_heroes"))
-    superhero = self.new
-    superhero.name = "Spiderman"
-
-    superhero
+  def make_heroes
+    self.get_page.each do
+      superhero = Superhero.new
+      superhero.name = search("a[class = 'meta-title']").text.strip
+      end
   end
 end
