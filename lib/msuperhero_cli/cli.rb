@@ -47,9 +47,8 @@ class MsuperheroCli::CLI
       puts "Power(s): #{superhero.power}"
       puts "Bio: #{superhero.bio}"
     end
-  
+
     def ending
       puts "Thank you for using my app!  Excelsior!"
     end
   end
-

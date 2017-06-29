@@ -20,19 +20,3 @@ class MsuperheroCli::Superhero
       m.name.split("(").first.strip.downcase == name.downcase.strip
     end
   end
-
-  def self.scrape_heroes
-    doc = Nokogiri::HTML(open("https://www.thoughtco.com/top-marvel-comic-book-superheroes-804277"))
-    names = doc.search("h3[class = 'heading heading-inline']")
-    names.collect{|e| new(e.text.strip, "https://www.thoughtco.com#{e.attr("href").split("?").first.strip}")}
-  end
-
-  def summary
-    # fetch summary if available or search doc and retrieve
-    @summary = doc.search('div[class="content-list-body"] p').text.strip
-  end
-
-  def doc
-    @doc = Nokogiri::HTML(open(self.url))
-  end
-end
