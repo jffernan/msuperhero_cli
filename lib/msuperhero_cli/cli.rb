@@ -37,18 +37,19 @@ class MsuperheroCli::CLI
         if new_input.between?(1,10)
           superhero = MsuperheroCli::Superhero.find(new_input)
           print_hero(superhero)
+        end
       end
     end
   end
-
+  
   def print_hero(superhero)
       puts "-------------- #{superhero.name} --------------"
       puts "Real Name: #{superhero.real_name}"
       puts "Power(s): #{superhero.power}"
       puts "Bio: #{superhero.bio}"
-    end
-
-    def ending
-      puts "Thank you for using my app!  Excelsior!"
-    end
   end
+
+  def ending
+    puts "Thank you for using my app!  Excelsior!"
+  end
+end
