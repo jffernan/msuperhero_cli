@@ -13,5 +13,33 @@ class MsuperheroCli::CLI
       MsuperheroCli::Superhero.all.each.with_index(1) do |superhero, i|
         puts "#{i}. #{superhero.name}"
       end
+  end
+
+  def menu
+    input = nil # Define input for while method on next line
+    while input != "exit" #run this code unless user inputs exit
+      # Ask user for specific input
+      puts "Enter the 'number' or 'name' of the hero you wish to learn about, or type 'list' to view the heroes again, or type 'exit' to quit app."
+      #recieve user input, remove whitespace, and make lowercase
+      input = gets.strip.downcase
+      if input == "list"
+        list_heroes
+      elsif input.to_i == 0
+        if superhero = MsuperheroCli::Superhero.find_by_name(input)
+          print_hero(superhero)
+        end
+      elsif input.to_i > 0
+        if superhero = MsuperheroCli::Superhero.find(input.to_i)
+          print_hero(superhero)
+        end
+      else
+        new_input = input.to.i
+        if new_input.between?(1,10)
+          superhero = MsuperheroCli::Superhero.find(new_input)
+          print_hero(superhero)
+      end
     end
+  end
+
+
 
