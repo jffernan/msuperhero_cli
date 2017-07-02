@@ -1,28 +1,20 @@
 # MsuperheroCli
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/msuperhero_cli`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+This Ruby Gem provides a CLI to learn about popular Marvel comic book superheros from a provided list of heroes.
 
 ## Installation
 
-Add this line to your application's Gemfile:
-
-```ruby
-gem 'msuperhero_cli'
-```
-
-And then execute:
-
-    $ bundle
-
-Or install it yourself as:
+You can install this gem yourself as:
 
     $ gem install msuperhero_cli
 
+The `msuperhero-cli` CLI will be installed and you can run `msuperhero-cli` to get a list of famous superheroes in your command line.
+
 ## Usage
 
-TODO: Write usage instructions here
+Run: `msuperhero-cli` after installing the gem.
+
+CLI: Follow the on-screen promts.
 
 ## Development
 
@@ -38,4 +30,3 @@ Bug reports and pull requests are welcome on GitHub at https://github.com/'jffer
 ## License
 
 The gem is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
-
