@@ -1,7 +1,7 @@
 require 'open-uri'
 require 'nokogiri'
 require 'pry'
-
-require "msuperhero_cli/version"
-require "msuperhero_cli/superhero"
-require "msuperhero_cli/cli"
+# setup environment
+require_relative "msuperhero_cli/version"
+require_relative "msuperhero_cli/superhero"
+require_relative "msuperhero_cli/cli"

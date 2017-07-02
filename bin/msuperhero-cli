@@ -1,5 +1,5 @@
 #!/usr/bin/env ruby
 require "bundler/setup"
 require "msuperhero_cli"
-
-MsuperheroCli::CLI.new.call
+# link to files that include MsuperheroCli::CLI
+MsuperheroCli::CLI.new.call #call to start app
