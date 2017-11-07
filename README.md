@@ -2,6 +2,8 @@
 
 This Ruby Gem provides a CLI to learn about popular Marvel comic book superheros from a provided list of heroes.
 
+View my blog about the development of my app at: https://github.com/jffernan/jffernan.github.io/blob/master/_posts/2017-07-05-cli_data_gem_project_blog.markdown
+
 ## Installation
 
 You can install this gem yourself as:
